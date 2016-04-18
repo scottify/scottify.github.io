@@ -1,0 +1,47 @@
+<html>
+<head>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+
+  <script src="js/simple-slider.js"></script>
+
+  <link href="css/reset.css" rel="stylesheet" type="text/css" />  
+  <link href="css/simple-slider.css" rel="stylesheet" type="text/css" />
+  
+</head>
+
+<body>
+
+  <div class="panel">
+
+  <h2>Make a single donation</h2>
+  <input id="single-slider" type="text" data-slider="true" value="500" data-slider-values="50,100,250,500,1000,2500,5000" data-slider-equal-steps="true" data-slider-snap="true" data-slider-highlight="true">
+  <p class="single-note">Amount ($500 is average):</p>
+  <p class="single-field"><strong>$ </strong></p>
+
+  </div>
+
+  <div class="panel">
+
+  <h2>Become a monthly supporter</h2>
+  <input id="monthly-slider" type="text" data-slider="true" value="25" data-slider-values="5,10,25,50,100,250,500" data-slider-equal-steps="true" data-slider-snap="true" data-slider-highlight="true">
+  <p class="monthly-note">Amount ($25 is average):</p>
+  <p class="monthly-field"><strong>$ </strong></p>
+
+  </div>
+
+  <script>
+    $("#single-slider").each(function () {
+      $("<input type='text'>").addClass("pas-other-amount").attr('id','single-other').attr('data-method-id','13').attr('name','amount').insertAfter('.single-field strong');
+    })
+    .bind("slider:ready slider:changed", function (event, data) {
+      $("#single-other").val(data.value.toFixed(0));
+    });
+    $("#monthly-slider").each(function () {
+      $("$<input type='text'>").addClass("pas-other-amount").attr('id','monthly-other').attr('data-method-id','11').attr('name','amount').insertAfter('.monthly-field strong');
+    })
+    .bind("slider:ready slider:changed", function (event, data) {
+      $("#monthly-other").val(data.value.toFixed(0));
+    });
+  </script>
+</body>
+</html>
