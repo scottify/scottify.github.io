@@ -10,8 +10,11 @@ var __slice = [].slice,
   __indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; };
 
 (function($, window) {
-  var SimpleSlider;
-  SimpleSlider = (function() {
+    var SimpleSlider;
+    if (__indexOf.call(window, 'ontouchstart') >= 0) {
+      $('html').addClass('touch');
+    }
+    SimpleSlider = (function() {
 
     function SimpleSlider(input, options) {
       var ratio,
@@ -61,7 +64,7 @@ var __slice = [].slice,
         });
       }
       this.dragger.css({
-        marginTop: this.dragger.outerHeight() / -2,
+        marginTop: this.dragger.outerWidth() / -2,
         marginLeft: this.dragger.outerWidth() / -2
       });
       this.track.mousedown(function(e) {
@@ -72,23 +75,30 @@ var __slice = [].slice,
           return _this.trackEvent(e);
         });
       }
-      this.dragger.mousedown(function(e) {
-        if (e.which !== 1) {
-          return;
-        }
+        this.dragger.on('touchstart mousedown', function(evt) {
+          if (evt.type === "mousedown") {
+            if (evt.which !== 1) {
+              return;
+            }
+            evt.preventDefault();
+          }
         _this.dragging = true;
         _this.dragger.addClass("dragging");
-        _this.domDrag(e.pageX, e.pageY);
+        _this.domDrag(evt);
         return false;
       });
-      $("body").mousemove(function(e) {
-        if (_this.dragging) {
-          _this.domDrag(e.pageX, e.pageY);
+        $("body").on('touchmove mousemove', function(evt) {
+          if (evt.type === "mousemove") {
+            evt.preventDefault();
+          }
+          if (_this.dragging) {
+          _this.domDrag(evt);
           return $("body").css({
             cursor: "pointer"
           });
         }
-      }).mouseup(function(e) {
+      });
+      $("body").on('touchend mouseup', function() {
         if (_this.dragging) {
           _this.dragging = false;
           _this.dragger.removeClass("dragging");
@@ -142,35 +152,42 @@ var __slice = [].slice,
       return this.valueChanged(value, ratio, "setValue");
     };
 
-    SimpleSlider.prototype.trackEvent = function(e) {
-      if (e.which !== 1) {
+    SimpleSlider.prototype.trackEvent = function(evt) {
+      if (evt.which !== 1) {
         return;
       }
-      this.domDrag(e.pageX, e.pageY, true);
+      this.domDrag(evt, true);
       this.dragging = true;
       return false;
     };
 
-    SimpleSlider.prototype.domDrag = function(pageX, pageY, animate) {
-      var pagePos, ratio, value;
-      if (animate == null) {
-        animate = false;
-      }
-      pagePos = pageX - this.slider.offset().left;
-      pagePos = Math.min(this.slider.outerWidth(), pagePos);
-      pagePos = Math.max(0, pagePos);
-      if (this.pagePos !== pagePos) {
-        this.pagePos = pagePos;
-        ratio = pagePos / this.slider.outerWidth();
-        value = this.ratioToValue(ratio);
-        this.valueChanged(value, ratio, "domDrag");
-        if (this.settings.snap) {
-          return this.setSliderPositionFromValue(value, animate);
-        } else {
-          return this.setSliderPosition(pagePos, animate);
+      SimpleSlider.prototype.domDrag = function(evt, animate) {
+        var pagePos, pageX, pageY, ratio, value, _ref, _ref1;
+        if (animate == null) {
+          animate = false;
         }
-      }
-    };
+        if (evt.originalEvent && evt.originalEvent.touches) {
+          _ref = evt.originalEvent.touches[0], pageX = _ref.pageX, pageY = _ref.pageY;
+        } else if (evt.touches) {
+          _ref1 = evt.touches[0], pageX = _ref1.pageX, pageY = _ref1.pageY;
+        } else {
+          pageX = evt.pageX, pageY = evt.pageY;
+        }
+        pagePos = pageX - this.slider.offset().left;
+        pagePos = Math.min(this.slider.outerWidth(), pagePos);
+        pagePos = Math.max(0, pagePos);
+        if (this.pagePos !== pagePos) {
+          this.pagePos = pagePos;
+          ratio = pagePos / this.slider.outerWidth();
+          value = this.ratioToValue(ratio);
+          this.valueChanged(value, ratio, "domDrag");
+          if (this.settings.snap) {
+            return this.setSliderPositionFromValue(value, animate);
+          } else {
+            return this.setSliderPosition(pagePos, animate);
+          }
+        }
+      };
 
     SimpleSlider.prototype.setSliderPosition = function(position, animate) {
       if (animate == null) {
