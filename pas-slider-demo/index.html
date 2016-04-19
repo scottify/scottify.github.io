@@ -112,11 +112,17 @@
     });
 
     $('#single-other').focus(function() {
-      $('.single-text, .single-slider').addClass('disabled');
-      $('.monthly-text, .monthly-slider').removeClass('disabled');
+      $('.single-slider').addClass('disabled');
+      $('.monthly-slider').removeClass('disabled');
+      $('.single-desc').html('Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.');
+      $('.single-image').attr({
+        src: 'images/single-default.jpg',
+        alt: 'Single Default'
+      });
+      $('.single-text .symbol, .single-text .single-amount, .single-text .month').hide();
     });
     $('.single-slider').click(function() {
-      $('.single-text, .single-slider').removeClass('disabled');
+      $('.single-slider').removeClass('disabled');
     });
 
     // Monthly
@@ -190,11 +196,18 @@
     });
 
     $('#monthly-other').focus(function() {
-      $('.monthly-text, .monthly-slider').addClass('disabled');
-      $('.single-text, .single-slider').removeClass('disabled');
+      $('.monthly-slider').addClass('disabled');
+      $('.single-slider').removeClass('disabled');
+      $('.monthly-desc').html('Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.');
+      $('.monthly-image').attr({
+        src: 'images/monthly-default.jpg',
+        alt: 'Monthly Default'
+      });
+      $('.monthly-text .symbol, .monthly-text .monthly-amount, .monthly-text .month').hide();
     });
     $('.monthly-slider').click(function() {
-      $('.monthly-text, .monthly-slider').removeClass('disabled');
+      $('.monthly-slider').removeClass('disabled');
+      $('.monthly-text .symbol, .monthly-text .monthly-amount, .monthly-text .month').show();
     });
 
   </script>
