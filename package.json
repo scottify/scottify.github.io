@@ -1,5 +1,5 @@
 {
-  "name": "boilerplate",
+  "name": "scottify",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -20,12 +20,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nburne/Mustard-Boilerplate.git"
+    "url": "git+https://github.com/scottify/scottify.github.io.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/nburne/Mustard-Boilerplate/issues"
+    "url": "https://github.com/scottify/scottify.github.io/issues"
   },
-  "homepage": "https://github.com/nburne/Mustard-Boilerplate#readme"
+  "homepage": "https://github.com/scottify/scottify.github.io#readme"
 }
