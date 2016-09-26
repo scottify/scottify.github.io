@@ -1,0 +1,102 @@
+/*------------------------------------------------------------------------*\
+	Code Section: Background Section
+\*------------------------------------------------------------------------*/
+
+#main {
+	padding: 60px 0;
+
+	@media (max-width: @tablet-break) {
+		padding: 20px;
+	}
+
+	section {
+
+		h3 {
+			font-size: 1.8rem;
+			line-height: 2.6rem;
+			color: @paragraph;
+		}
+
+		p {
+			margin-bottom: 40px;
+			padding: 0 120px;
+
+			@media (max-width: @tablet-break) {
+				font-size: 1.4rem;
+				line-height: 2.2rem;
+				margin-bottom: 20px;
+				padding: 0;
+			}
+
+			a {
+
+				&.thinkds {
+
+					&:hover {
+						color: @thinkds;
+						text-decoration: none;
+					}
+
+				}
+
+			}
+
+		}
+
+		ul {
+
+			&.clients {
+				margin-bottom: 40px;
+
+				li {
+					.inline-block;
+					margin: 0 12px;
+				}
+
+			}
+
+			&.social {
+				
+				li {
+					.inline-block;
+					font-size: 3.6rem;
+					margin: 0 12px;
+
+					@media (max-width: @tablet-break) {
+						margin: 0 8px;
+						
+						&:first-child {
+							margin-left: 0;
+						}
+
+					}
+
+					a {
+
+						&.twitter {
+							color: @twitter;
+						}
+
+						&.github {
+							color: @github;
+						}
+
+						&.linkedin {
+							color: @linkedin;
+						}
+
+						&:hover {
+							color: @paragraph;
+						}
+
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+	
+}

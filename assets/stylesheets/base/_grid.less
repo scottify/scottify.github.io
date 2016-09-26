@@ -1,0 +1,104 @@
+/*------------------------------------------------------------------------*\
+	Code Section: Grid Elements
+\*------------------------------------------------------------------------*/
+
+.mobile-grid {
+
+	@media (max-width: @mobile-break) {
+		float: none;
+		width: 98%;
+	}
+
+}
+
+.row {
+	.clearfix;
+	margin: 0 auto;
+	position: relative;
+    padding: 0 10px;
+    width: 1080px;
+
+	@media (max-width: @desktop-break) {
+		width: 100%;
+	}
+
+	.columns {		
+		float: left;
+		margin: 0 1%;
+		width: 98%;
+
+		.arabic & {
+			float: right;
+		}
+		
+		&.centered {
+			float: none;
+			margin: 0 auto;
+		}
+		
+		&.col-1 {
+			width: 7.33%;
+			.mobile-grid;
+		}
+
+		&.col-2 {
+			width: 14.66%;
+
+			@media (max-width: @tablet-break) {
+				width: 31.33%;
+			}
+
+			@media (max-width: @mobile-break) {
+				width: 48%;
+			}
+
+		}
+
+		&.col-3 {
+			width: 23%;
+			.mobile-grid;
+
+			@media (max-width: @tablet-break) {
+				width: 48%;
+			}
+
+		}
+
+		&.col-4 {
+			width: 31.33%;
+			.mobile-grid;
+		}
+		
+		&.col-5 {
+			width: 40.16%;
+			.mobile-grid;
+		}
+
+		&.col-6 {
+			width: 48%;
+			.mobile-grid;
+		}
+		
+		&.col-7 {
+			width: 55.84%;
+			.mobile-grid;
+		}
+
+		&.col-8 {
+			width: 64.66%;
+			.mobile-grid;
+		}
+		
+		&.col-9 {
+			width: 73%;
+			.mobile-grid;
+		}
+		
+		&.col-10 {
+			width: 81.34%;
+			.mobile-grid;
+		}
+
+	}
+
+}

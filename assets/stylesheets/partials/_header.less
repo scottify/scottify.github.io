@@ -1,0 +1,54 @@
+/*------------------------------------------------------------------------*\
+	Code Section: Header Section
+\*------------------------------------------------------------------------*/
+
+header {
+	background: @panel;
+	padding: 40px 0;
+
+	@media (max-width: @tablet-break) {
+		padding: 20px;
+	}
+
+	h1 {
+		color: @primary;
+		font-size: 4.2rem;
+		letter-spacing: 1.5px;
+		margin-bottom: 4px;
+
+		@media (max-width: @tablet-break) {
+			font-size: 3rem;
+			line-height: 3.6rem;
+			margin-bottom: 8px;
+
+			span {
+				display: none;
+			}
+
+		}
+
+	}
+
+	h2 {
+		color: @title;
+		font-size: 2.4rem;
+
+		small {
+			color: darken(@panel,40%);
+			display: block;
+			font-size: 1.6rem;
+		}
+
+		@media (max-width: @tablet-break) {
+			font-size: 1.6rem;
+			line-height: 2.4rem;
+
+			small {
+				margin-top: 12px;
+			}
+
+		}
+
+	}
+
+}

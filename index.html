@@ -18,48 +18,151 @@ var ua = navigator.userAgent,
 
 <head>
 
-	<title>Scott Llewellyn</title>
+    <title>Scott Llewellyn | Front-end developer, visual designer and all round geek.</title>
 
-    <meta http-equiv="refresh" content="0;url=https://twitter.com/scottifydotcom">
-    <script type="text/javascript">
-        window.location.href = "https://twitter.com/scottifydotcom"
-    </script>
-
-	<!-- so:meta -->
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!-- so:meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="content-language" content="en" />
     <meta name="robots" content="all" />
     <meta name="HandheldFriendly" content="True">
-	<meta name="MobileOptimized" content="320">
+    <meta name="MobileOptimized" content="320">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="description" content="Currently working as part of a remote team for THINK Digital, specialising in designing and building interesting and worthwhile projects for nonprofit organisations around the world." />
     <meta name="author" content="Scott Llewellyn" />
     <meta name="copyright" content="2016, Scott Llewellyn" />
     <meta name="Geo.Country" content="GB" />
     <meta name="Geo.Region" content="GB-BST" />
-    <meta itemprop="name" content="Scott Llewellyn | Front End Developer, Visual Designer and all round Geek.">
-	<meta itemprop="description" content="Currently working as part of a remote team for THINK Digital, specialising in designing and building interesting and worthwhile projects for nonprofit organisations around the world.">
-	<meta itemprop="image" content="/">
-	<meta property="twitter:card" content="summary"/>
-	<meta property="twitter:site" content="@scottifydotcom"/>
-	<meta property="twitter:title" content="Scott Llewellyn | Front End Developer, Visual Designer and all round Geek."/>
-	<meta property="twitter:description" content="Currently working as part of a remote team for THINK Digital, specialising in designing and building interesting and worthwhile projects for nonprofit organisations around the world."/>
-	<meta property="twitter:image" content="/"/>
-	<meta property="og:title" content="Scott Llewellyn | Front End Developer, Visual Designer and all round Geek."/>
-	<meta property="og:description" content="Currently working as part of a remote team for THINK Digital, specialising in designing and building interesting and worthwhile projects for nonprofit organisations around the world."/>
+    <meta itemprop="name" content="Scott Llewellyn | Front-end developer, visual designer and all round geek.">
+    <meta itemprop="description" content="Currently working as part of a remote team for THINK Digital, specialising in designing and building interesting and worthwhile projects for nonprofit organisations around the world.">
+    <meta itemprop="image" content="/">
+    <meta property="twitter:card" content="summary"/>
+    <meta property="twitter:site" content="@scottifydotcom"/>
+    <meta property="twitter:title" content="Scott Llewellyn | Front-end developer, visual designer and all round geek."/>
+    <meta property="twitter:description" content="Currently working as part of a remote team for THINK Digital, specialising in designing and building interesting and worthwhile projects for nonprofit organisations around the world."/>
+    <meta property="twitter:image" content="/"/>
+    <meta property="og:title" content="Scott Llewellyn | Front-end developer, visual designer and all round geek."/>
+    <meta property="og:description" content="Currently working as part of a remote team for THINK Digital, specialising in designing and building interesting and worthwhile projects for nonprofit organisations around the world."/>
     <meta property="og:site_name" content="scottify.com" />
     <meta property="og:url" content="http://scottify.com" />
     <meta property="og:type" content="website"/>
     <meta property="og:image" content="/"/>
     <!-- eo:meta -->
 
+    <!-- so:stylesheets -->
+    <link rel="stylesheet" media="print,screen,tv,projection" type="text/css" href="./assets/stylesheets/min/global.css" />
+    <link rel="stylesheet" media="screen" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <!-- eo:stylesheets -->
+
+    <!-- so:favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="./assets/favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./assets/favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./assets/favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./assets/favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./assets/favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./assets/favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./assets/favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./assets/favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="./assets/favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./assets/favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicons/favicon-16x16.png">
+    <!--[if IE]>
+        <link rel="icon" href="./assets/favicons/favicon.ico" type="image/x-icon" />
+        <link rel="shortcut icon" href="./assets/favicons/favicon.ico" type="image/x-icon" />
+    <![endif]-->
+    <link rel="manifest" href="./assets/favicons/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="./assets/favicons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!-- eo:favicon -->
+
+    <!-- so:javascripts -->
+    <!--[if (gte IE 6)&(lte IE 8)]>
+        <script type="text/javascript" src="./assets/javascripts/vendor/selectivizr/selectivizr.min.js"></script>
+    <![endif]-->
+    <!--[if lt IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+    <![endif]-->
+    <!-- eo:javascripts -->
+
 </head>
 
 <body>
 
-<p>If you are not redirected automatically, follow the <a href='https://twitter.com/scottifydotcom'>link to my Twitter</a></p>
+    <div id="page">
+
+        <header id="header">
+            <div class="row">
+                <div class="columns col-12">
+                    <h1><span>Hi, I'm </span>Scott Llewellyn</h1>
+                    <h2>Front-end developer, visual designer and all round geek. <small>Based in Sheffield, UK</small></h2>
+                </div>
+            </div>
+        </header>
+
+        <main id="main">
+
+            <section id="content">
+                <div class="row">
+                    <div class="columns col-12">
+                        <p>Currently working as part of a remote team for <a href="http://thinkds.org/" class="thinkds" title="THINK Digital">THINK Digital</a>, specialising in designing and building interesting and worthwhile projects for nonprofit organisations around the world.</p>
+                        <!-- <ul class="clients unstyled">
+                            <li>
+                                <img src="./assets/images/amnesty-international.png" class="amnesty" alt="Amnesty International" title="Amnesty International" />
+                            </li>
+                            <li>
+                                <img src="./assets/images/international-rescue-committee.png" class="irc" alt="International Rescue Committee" title="International Rescue Committee" />
+                            </li>
+                            <li>
+                                <img src="./assets/images/unhcr.png" class="unhcr" alt="UNHCR" title="UNHCR" />
+                            </li>
+                            <li>
+                                <img src="./assets/images/wwf.png" class="wwf" alt="WWF" title="WWF" />
+                            </li>
+                        </ul> -->
+                        <h3>Follow me</h3>
+                        <ul class="social unstyled">
+                            <li>
+                                <a href="https://twitter.com/scottifydotcom" class="twitter" title="Twitter" target="_blank">
+                                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/scottify" class="github" title="GitHub" target="_blank">
+                                    <i class="fa fa-github" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/in/scott-llewellyn-82298299" class="linkedin" title="LinkedIn" target="_blank">
+                                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer id="footer">
+            <div class="row">
+                <div class="columns col-12">
+                    <p>Scott Llewellyn &copy; <script>document.write(new Date().getFullYear())</script></p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- so:javascripts -->
+    <script type="text/javascript" src="./assets/javascripts/vendor/rem/rem.min.js"></script>
+    <script type="text/javascript" src="./assets/javascripts/vendor/modernizr/modernizr.min.js"></script>
+    <script type="text/javascript" src="./assets/javascripts/min/global.js"></script>
+    <!-- eo:javascripts -->
 
 </body>
 </html>

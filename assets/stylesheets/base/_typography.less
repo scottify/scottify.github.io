@@ -1,0 +1,125 @@
+/*------------------------------------------------------------------------*\
+	Code Section: Typography Elements
+\*------------------------------------------------------------------------*/
+
+/* Web fonts */
+
+@import 'https://fonts.googleapis.com/css?family=Bitter|Open+Sans';
+
+.heading-font { font-family: 'Bitter', Georgia, serif; }
+.body-font { font-family: 'Open Sans', Helvetica, Arial, sans-serif; }
+
+@default-margin: 20px;
+
+h1, h2, h3, h4, h5, h6 {
+	.heading-font;
+	color: @title;
+	font-weight: normal;
+
+	small {
+		color: @primary;
+	}
+
+}
+
+h1 {
+	font-size: 4.8rem;
+	line-height: 5.2rem;
+	margin-bottom: @default-margin;
+}
+
+h2 {
+	font-size: 3.2rem;
+	line-height: 3.8rem;
+	margin-bottom: @default-margin;
+}
+
+h3 {
+	font-size: 2.4rem;
+	line-height: 3rem;
+	margin-bottom: @default-margin;
+}
+
+h4 {
+	font-size: 2rem;
+	line-height: 2.8rem;
+	margin-bottom: @default-margin;
+}
+
+h5 {
+	font-size: 1.8rem;
+	line-height: 2.6rem;
+	margin-bottom: @default-margin;
+}	
+
+h6 {
+	font-size: 1.6rem;
+	line-height: 2.4rem;
+	margin-bottom: @default-margin;
+}
+
+a {
+	color: inherit;
+}
+
+p {
+	font-size: 1.6rem;
+	line-height: 2.4rem;
+	margin-bottom: @default-margin;
+
+	&.lead {
+		font-size: 2rem;
+		line-height: 2.8rem;
+	}
+
+}
+
+ul, ol {
+	margin: 0 0 @default-margin 15px;
+
+	li {
+		font-size: 1.6rem;
+		line-height: 2.4rem;
+		margin-bottom: @default-margin / 2;
+	}
+
+	&.unstyled {
+		list-style: none;
+		margin: 0 0 @default-margin;
+	}
+
+}
+
+blockquote {
+	margin-bottom: @default-margin;
+
+	p {
+		font-family: 'Georgia';
+		font-size: 1.8rem;
+		font-style: italic;
+		line-height: 2.6rem;
+		margin-bottom: 0;
+	}
+
+	footer {
+		border-left: 3px solid @border;
+		font-size: 1.4rem;
+		line-height: 1.8rem;
+		margin: 8px 0 0;
+		padding: 0 0 0 10px;
+	}
+
+}
+
+address {
+	font-style: normal;
+	margin-bottom: @default-margin;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, ol, li, blockquote, address {
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+}

@@ -1,0 +1,64 @@
+/*------------------------------------------------------------------------*\
+	Code Section: Button Elements
+\*------------------------------------------------------------------------*/
+
+.button {
+	border: none;
+	.border-radius(5px);
+	background: @black;
+	color: @white;
+	.inline-block;
+	margin: 0;
+	font-size: 18px;
+	line-height: 48px;
+	padding: 0 40px;
+	font-weight: 600;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	vertical-align: middle;
+	-webkit-appearance: none;
+	width: auto;
+
+	&:hover {
+		cursor: pointer;
+		background: @black;
+		color: @white;
+	}
+
+	&:active, &:focus, &:target {
+		position: relative;
+		top: 2px;
+	}
+
+}
+
+.btn-primary {
+	.button;
+	background: @primary;
+
+	&:hover {
+		background: @primary;
+	}
+
+}
+
+.btn-secondary {
+	.button;
+	background: @secondary;
+
+	&:hover {
+		background: @secondary;
+	}
+
+}
+
+.btn-submit {
+	.button;
+	background: @primary;
+
+	&:hover {
+		background: @primary;
+	}
+
+}
