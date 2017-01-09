@@ -1,0 +1,23 @@
+#nav ul li {
+    display: block;
+    float: left;
+}
+
+#nav ul li a {
+    padding: 7px 64px 6px;
+}
+
+#wedding .wrap {
+    background: url("../images/bottom.png") no-repeat scroll center bottom transparent;
+    padding: 0 20px 75px;
+}
+
+#venue,
+#hotel,
+#footer,
+.wrap,
+.main-content.full,
+.supporting-content.full,
+.container {
+	height: 1%;
+}

@@ -1,0 +1,769 @@
+/*------------------------------------------------------------------------------------------------------------------------------------------------*\
+	Code Section		: Style CSS	
+\*------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------------*\
+	Section				: Typography			
+\*------------------------------------------------------------------------*/
+
+@font-face {
+    font-family: 'BebasNeueRegular';
+    src: url('type/bebasneue-webfont.eot');
+    src: url('type/bebasneue-webfont.eot?#iefix') format('embedded-opentype'),
+         url('type/bebasneue-webfont.woff') format('woff'),
+         url('type/bebasneue-webfont.ttf') format('truetype'),
+         url('type/bebasneue-webfont.svg#BebasNeueRegular') format('svg');
+}
+
+@font-face {
+	font-family: 'mission_scriptregular';
+    src: url('type/mission-script-webfont.eot');
+    src: url('type/mission-script-webfont.eot?#iefix') format('embedded-opentype'),
+         url('type/mission-script-webfont.woff') format('woff'),
+         url('type/mission-script-webfont.ttf') format('truetype'),
+         url('type/mission-script-webfont.svg#mission_scriptregular') format('svg');
+}
+
+body, input, textarea {
+	font-family: "Helvetica", Arial, sans-serif;
+	font-size: 16px;
+	line-height: 20px;
+	word-spacing: 2px;
+}
+
+h2 {	
+	font-family: 'mission_scriptregular', Helvetica, Arial, sans-serif;	
+	font-weight: normal;
+	font-style: normal;
+}
+
+h1, h3, h4, .date, #nav, input[type=submit] {	
+	font-family: 'BebasNeueRegular', Helvetica, Arial, sans-serif;	
+	font-weight: normal;
+	font-style: normal;
+}
+
+.full-content p, p a, #footer p, #venue .supporting-content h3 span, p.copy em {
+	font-family: "Georgia", Helvetica, Arial, sans-serif;
+	font-weight: normal;
+	font-style: italic;
+}
+
+h1 {
+	font-size: 58px;
+	line-height: 62px;
+}
+
+h2 {
+	font-size: 48px;
+	line-height: 52px;
+}
+
+h3 {
+	font-size: 26px;
+	line-height: 32px;
+}
+
+h4, input[type=submit] {
+	font-size: 20px;
+	line-height: 26px;
+}
+
+p, li {
+	font-size: 14px;
+	line-height: 20px;
+}
+
+/*------------------------------------------------------------------------*\
+	Section				: Layout			
+\*------------------------------------------------------------------------*/
+
+body {
+	background: #222;
+	color: #222;
+}
+
+p a {
+	color: #c0a364;
+	font-weight: bold;
+	font-style: normal;
+}
+
+p a:hover,
+p a:active {
+	text-decoration: underline;
+}
+
+.wrap {	
+	height: 100%;
+	margin: 0 auto;
+	padding: 107px 20px 0;
+	position: relative;
+	width: 940px;
+}
+
+.full-content {
+	margin: 0 0 30px;
+	text-align: center;
+}
+
+.full-content h2 {
+	color: #c0a364;
+	text-shadow: 2px 2px 0px rgba(0, 0, 0, 1);
+	margin: 0 0 10px;
+}
+
+.full-content p {
+	color: #fff;
+	text-shadow: 1px 1px 0px rgba(0, 0, 0, 1);
+	margin: 0 0 15px;
+	font-size: 16px;
+	line-height: 22px;
+}
+
+.full-content p strong {
+	color: #c0a364;
+}
+
+.main-content {
+	background: #fff;
+	padding: 10px;
+}
+
+.supporting-content {
+	background: #fff;
+	padding: 10px;
+}
+
+.left,
+.middle,
+.right {
+	width: 298px;
+}
+
+.left,
+.middle {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.container {
+	border: 5px solid #c0a364;
+	padding: 20px;
+}
+
+img {
+	height: auto;
+	max-width: 100%;
+}
+
+/*------------------------------------------------------------------------*\
+	Section				: Nav			
+\*------------------------------------------------------------------------*/
+
+#nav {
+	background: #fff;
+	border-bottom: 5px solid #c0a364;
+	position: fixed !important;
+	width: 100%;
+	z-index: 10;
+	-webkit-box-shadow: 0px 20px 60px 0px rgba(0, 0, 0, 0.8);
+	box-shadow: 0px 20px 60px 0px rgba(0, 0, 0, 0.8);
+	height: 62px;
+}
+
+#nav .wrap {
+	padding: 10px 20px;
+}
+
+#nav ul {
+	text-align: center;
+}
+
+#nav ul li {
+	display: inline-block;
+	font-size: 24px;
+	line-height: 24px;
+	margin: 3px 0 0 10px;
+}
+
+#nav ul li a {
+	background: #c0a364;
+	color: #222;
+	padding: 7px 20px 6px;
+	display: block;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-ms-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+
+#nav ul li a:hover,
+#nav ul li a:active,
+#nav ul li.current a {
+	background: #222;
+	color: #c0a364;
+}
+
+#nav-toggle {
+	display: none;
+}
+
+/*------------------------------------------------------------------------*\
+	Section				: Wedding			
+\*------------------------------------------------------------------------*/
+
+#wedding {
+	padding: 127px 0 0 0;
+}
+
+#wedding .wrap {
+	background: url(../images/top.png) no-repeat top center, url(../images/bottom.png) no-repeat bottom center;
+	padding: 88px 20px 75px;
+}
+
+#wedding .main-content {
+	float: none;
+	margin: 0 auto 20px;
+	text-align: center;
+	width: 707px;
+}
+
+#wedding .main-content img {
+	margin: -10px -10px 10px;
+	max-width: 700px;
+}
+
+#wedding .main-content .left, 
+#wedding .main-content .middle, 
+#wedding .main-content .right {
+    width: 218px;
+	border-right: 1px solid #e3e3e3;
+	padding: 10px 0 10px;
+	margin: 10px 0 0;
+}
+
+#wedding .main-content .right {
+	border: none;
+}
+
+#wedding .main-content h3 {
+	font-size: 48px;
+	line-height: 48px;
+}
+
+#wedding .main-content h3 span {
+	color: #c0a364;
+}
+
+#wedding .main-content h4 {
+	font-size: 24px;
+	line-height: 30px;
+}
+
+#wedding .main-content p {
+	font-size: 14px;
+	line-height: 20px;
+}
+
+#wedding .main-content .copy {
+	margin: 0;
+	padding: 10px 0 10px;
+	font-size: 18px;
+	line-height: 18px;
+	border-bottom: 1px dotted #e3e3e3;
+	border-top: 1px dotted #e3e3e3;
+}
+
+#wedding .main-content .copy em {
+	font-style: normal;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+#wedding .main-content .copy:last-child {
+	margin: 0;
+}
+
+/*------------------------------------------------------------------------*\
+	Section				: RSVP		
+\*------------------------------------------------------------------------*/
+
+#rsvp .main-content {
+	float: none;
+	margin: 0 auto 20px;
+}
+
+#rsvp .main-content .ss-form-container {
+	position: relative;
+}
+
+#rsvp .main-content .ss-form-container .ss-required-asterisk {
+	color: #C43B1D;
+	font-family: "Georgia", Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	font-style: italic;
+	font-size: 14px;
+    line-height: 20px;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+}
+
+#rsvp .main-content #ss-form {
+
+}
+
+#rsvp .main-content #ss-form .ss-form-question {
+	margin: 0 0 20px;
+}
+
+#rsvp .main-content #ss-form .ss-form-question .ss-form-entry .ss-q-title {
+	font-family: "Georgia", Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	font-style: normal;
+	font-size: 18px;
+    line-height: 24px;
+}
+
+#rsvp .main-content #ss-form .ss-form-question .ss-form-entry .ss-q-title .ss-required-asterisk {
+	font-weight: normal;
+	color: #C43B1D;
+}
+
+#rsvp .main-content #ss-form .ss-form-question .ss-form-entry .ss-q-help {
+	font-family: "Georgia", Helvetica, Arial, sans-serif;
+	font-weight: normal;
+	font-style: italic;
+	font-size: 14px;
+    line-height: 20px;
+	margin: 5px 0 0;
+}
+
+#rsvp .main-content #ss-form .ss-form-question .ss-form-entry input[type=text],
+#rsvp .main-content #ss-form .ss-form-question .ss-form-entry textarea {
+	box-shadow: none;
+	background: #fff;
+	border: 3px solid #E3E3E3;
+	font-family: "Georgia", Helvetica, Arial, sans-serif;
+	font-weight: normal;
+	font-style: italic;
+	margin: 10px 0 0;
+	padding: 8px 10px;
+	width: 100%;
+	
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+#rsvp .main-content #ss-form .ss-form-question .ss-form-entry textarea {
+	height: 100px;
+	resize: none;
+}
+
+#rsvp .main-content #ss-form .ss-form-question .ss-form-entry .ss-choices {
+	margin: 10px 0 0;
+}
+
+#rsvp .main-content #ss-form .ss-form-question .ss-form-entry .ss-choices .ss-choice-item {
+	
+}
+
+#rsvp .main-content #ss-form .ss-form-question .ss-form-entry .required-message {
+	color: #C43B1D;
+}
+
+#rsvp .main-content #ss-form .ss-navigate input[type=submit] {
+	
+}
+
+#rsvp .main-content #ss-form .ss-navigate input[type=submit] {
+	border: none;
+	background: #c0a364;
+	color: #222;
+	font-size: 28px;
+	padding: 7px 20px 6px;
+	display: block;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-ms-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+
+#rsvp .main-content #ss-form .ss-navigate input[type=submit]:hover,
+#rsvp .main-content #ss-form .ss-navigate input[type=submit]:active {
+	background: #222;
+	color: #c0a364;
+	cursor: pointer;
+}
+
+/*------------------------------------------------------------------------*\
+	Section				: Gifts		
+\*------------------------------------------------------------------------*/
+
+#gifts .main-content {
+	float: none;
+	margin: 0 auto 20px;
+	text-align: center;
+}
+
+/*------------------------------------------------------------------------*\
+	Section				: Venue			
+\*------------------------------------------------------------------------*/
+
+#venue .wrap {
+	background: url(../images/middle.png) no-repeat bottom center;
+	padding: 107px 20px 100px;
+}
+
+#venue .main-content.right {
+	margin: 0 0 20px;
+	width: 680px;
+}
+
+#venue .main-content.right img {
+	margin: -10px -10px 10px;
+	max-width: 700px;
+}
+
+#venue .main-content.right iframe {
+	height: 420px;
+	max-width: 100%;
+}
+
+#venue .supporting-content {
+	margin: 0 0 20px;
+	width: 200px;
+}
+
+#venue .supporting-content .bottom {
+	clear: both;
+}
+
+#venue .supporting-content.full {
+	clear: both;
+	width: auto;
+}
+
+#venue .supporting-content img {
+	margin: -10px -10px 10px;
+	max-width: 220px;
+}
+
+#venue .supporting-content h3 span {
+	display: block;
+	color: #c0a364;
+	font-size: 16px;
+	line-height: 20px;
+	margin: 0 0 10px;
+}
+
+#venue .supporting-content h4 {
+	margin: 10px 0 0;
+}
+
+#venue .copy {
+	margin: 0 0 10px;
+}
+
+#venue .copy:last-child {
+	margin: 0;
+}
+
+/*------------------------------------------------------------------------*\
+	Section				: Hotel			
+\*------------------------------------------------------------------------*/
+
+#hotel .main-content {
+	float: none;
+	margin: 0 0 20px;
+	width: auto;
+}
+
+#hotel .main-content img {
+	margin: -10px -10px 10px;
+	max-width: 940px;
+}
+
+#hotel .supporting-content {
+	margin: 0 0 20px;
+	width: 279.666667px;
+}
+
+#hotel .supporting-content img {
+	margin: -10px -10px 10px;
+	max-width: 299.666667px;
+}
+
+#hotel .supporting-content.left {
+	margin: 0 20px 20px 0;
+}
+
+#hotel .supporting-content.full {
+	clear: both;
+	margin: 0;
+	width: auto;
+}
+
+#hotel .supporting-content h4 {
+	margin: 10px 0 0;
+}
+
+/*------------------------------------------------------------------------*\
+	Section				: Footer			
+\*------------------------------------------------------------------------*/
+
+#footer .wrap {
+	background: url(../images/bottom.png) no-repeat bottom center;
+	padding: 40px 20px 100px;
+}
+
+#footer p {
+	color: #fff;
+	text-align: center;
+	text-shadow: 1px 1px 0px rgba(0, 0, 0, 1);
+}
+
+/*------------------------------------------------------------------------*\
+	Section				: Clearfix			
+\*------------------------------------------------------------------------*/
+
+#nav:after,
+#venue:after,
+#hotel:after,
+#footer:after,
+.wrap:after,
+.main-content.full:after,
+.supporting-content.full:after,
+.container:after {
+	clear: both;
+	content: ".";
+	display: block;
+	height: 0;
+	visibility: hidden;
+}
+
+/*------------------------------------------------------------------------*\
+	Section				: Image Replacement			
+\*------------------------------------------------------------------------*/
+
+#nav-toggle {
+	display: block;
+	line-height: 0;
+	overflow: hidden;
+	text-align: left;
+	text-indent: -1000em;
+}
+
+/*------------------------------------------------------------------------*\
+	Section				: Tablet		
+\*------------------------------------------------------------------------*/
+
+@media (min-width: 695px) and (max-width: 994px) {
+	
+	.wrap {	
+		width: 640px;
+	}
+	
+	#wedding .main-content {
+	    width: 620px;
+	}
+	
+	#wedding .main-content h3 {
+	    font-size: 44px;
+	    line-height: 44px;
+	}
+	
+	#wedding .main-content .left, 
+	#wedding .main-content .middle, 
+	#wedding .main-content .right {
+	    width: 189px;
+	}
+	
+	#venue .wrap {
+	    padding: 107px 20px 70px;
+	}
+	
+	#venue .main-content.right {
+	    width: 620px;
+	}
+	
+	#venue .main-content.right img {
+	    max-width: 640px;
+	}
+	
+	#venue .supporting-content {
+	    width: 290px;
+	}
+	
+	#venue .supporting-content.top {
+	    margin: 0 20px 20px 0;
+	}
+	
+	#hotel .supporting-content {
+	    width: 180px;
+	}
+	
+	#hotel .supporting-content img {
+	    width: 200px;
+	}
+	
+	#hotel .supporting-content h3 {
+		line-height: 26px;
+		margin: 0 5px 3px 0;
+	}
+	
+}
+
+/*------------------------------------------------------------------------*\
+	Section				: Mobile		
+\*------------------------------------------------------------------------*/
+
+@media (max-width: 695px) {
+	
+	.wrap {	
+		padding: 20px;
+		width: 260px;
+	}
+	
+	h2 {
+	    font-size: 38px;
+	    line-height: 42px;
+	}
+	
+	.js #nav {
+		display: block;
+	  	clip: rect(0 0 0 0);
+	  	max-height: 0;
+		overflow: hidden;
+	  	position: absolute;
+	  	zoom: 1;
+	}
+	
+	#nav {
+	    height: auto;
+	    position: relative !important;
+		-webkit-box-shadow: 0px 20px 60px 0px rgba(0, 0, 0, 0);
+		box-shadow: 0px 20px 60px 0px rgba(0, 0, 0, 0);
+	}
+	
+	#nav.opened {
+	  	max-height: 9999px;
+	}
+	
+	#nav .wrap {
+	    padding: 7px 20px 13px;
+	}
+	
+	#nav ul {
+		display: block;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+	}
+
+	#nav ul li {
+	  	display: block;
+		margin: 3px 0 0 0;
+		width: 100%;
+	}
+	
+	#nav-toggle {
+		background: url(../images/menu.png) no-repeat center center;
+		height: 24px;
+		margin: 10px auto 0;
+		padding: 0 20px;
+		display: block;
+		width: 260px;
+	}	
+	
+	#wedding {
+	    padding: 20px 0 0 0;
+	}
+	
+	#wedding .wrap {
+	    background: url("../images/top-mobile.png") no-repeat center top, url("../images/bottom-mobile.png") no-repeat center bottom;
+		padding: 69px 20px 57px;
+	}
+	
+	#wedding .main-content {
+	    width: 240px;
+	}
+	
+	#wedding .main-content h3 {
+	    font-size: 30px;
+	    line-height: 30px;
+	}
+	
+	#wedding .main-content .copy {
+	    font-size: 14px;
+	    line-height: 14px;
+	    margin: 5px 0;
+	}
+	
+	#wedding .main-content .left, 
+	#wedding .main-content .middle, 
+	#wedding .main-content .right {
+	    border-right: none;
+	    float: none;
+	    margin: 0;
+	    padding: 10px 0;
+	    width: auto;
+	}
+	
+	#rsvp .main-content .ss-form-container .ss-required-asterisk,
+	#rsvp .main-content #ss-form .ss-form-question .ss-form-entry .ss-q-title .ss-required-asterisk {
+		display: none;
+	}
+	
+	#rsvp .main-content #ss-form .ss-navigate table,
+	#rsvp .main-content #ss-form .ss-navigate input[type="submit"] {
+		width: 100%;
+	}
+	
+	#venue .wrap {
+	    background: url("../images/middle-mobile.png") no-repeat center bottom;
+	    padding: 30px 20px 36px;
+	}
+	
+	#venue .main-content {
+		display: none;
+	}
+	
+	#venue .supporting-content {
+	    float: none;
+	    width: 240px;
+	}
+	
+	#hotel .supporting-content {
+		clear: both;
+	    float: none;
+		margin: 0 0 20px;
+	    width: 240px;
+	}
+	
+	#hotel .supporting-content.left {
+	    margin: 0 0 20px;
+	}
+	
+	#hotel .supporting-content.right {
+		margin: 0 0 20px;
+	}
+	
+	#hotel .supporting-content img {
+		display: none;
+	}
+	
+	#footer .wrap {
+	    background: url("../images/bottom-mobile.png") no-repeat center bottom;
+	    padding: 0 20px 77px;
+	}
+	
+}
